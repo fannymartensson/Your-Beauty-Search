@@ -1,0 +1,257 @@
+body{
+  margin: 0;
+  display: grid;
+  grid-template-rows: 620px 1fr 499px 30px 300px 30px;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: 
+  "header"
+  "main"
+  "section"
+  "banner"
+  "footern"
+  "by";
+
+}
+header{
+  grid-area: header;
+  background-image: url("Peach\ Flat\ &\ Minimalist\ Beauty\ Website.png");
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "H1"
+  "text"
+}
+h1{
+  grid-area: H1;
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  margin-top: 200px;
+}
+p{
+  grid-area: text;
+  text-align: center;
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+}
+div{
+  grid-area:input-knapp ;
+  margin: 0 auto 220px auto;
+}
+main{ 
+  grid-area: main;
+  background-color: #FADFD1;
+}
+h2{
+  color:  #D77E5E;
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+#products{
+  display: grid;
+  grid-template-rows: 1fr 1fr  ;
+  grid-template-columns:   1fr 1fr;
+  grid-template-areas: 
+  "one two"
+  "three four";
+  margin-bottom: 50px;
+}
+#by{
+  grid-area: by;
+  background-color: #FADFD1;
+  font-size: 15px;
+  color: #000000;
+}
+#brandNames{
+  grid-area: banner;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 18px;
+
+}
+#valueOne{
+  background-color: white;
+}
+.productText{
+  color: #000000;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  font-size: 18px;
+}
+.dollarText{
+  color: #000000;
+  font-family: "Lucida Console", Monaco, monospace;
+  margin: 0;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: rgba(255, 171, 157, 0.5);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  background: #ffab9d;
+}
+.cta:hover svg {
+  transform: translateX(0);
+}
+.cta:active {
+  transform: scale(0.96);
+}
+#one{
+  grid-area: one; 
+  text-decoration: none;
+  color: #000000;
+  border: none;
+}
+#two{
+  grid-area: two;
+  text-decoration: none;
+  color: #000000;
+}
+#three{
+  grid-area: three;
+  text-decoration: none;
+  color: #000000;
+}
+#four{
+  grid-area: four;
+  text-decoration: none;
+  color: #000000;
+}
+.brand{
+  font-family: "Lucida Console", Monaco, monospace;
+  padding-right: 20px;
+  color: black;
+}
+section{
+  display: grid;
+  grid-template-rows: 500px;
+  grid-template-columns:1fr 1fr;
+  grid-area: section;
+  background-color: #D77E5E;
+}
+#lipstick{
+  display: left;
+}
+footer{
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "about"
+  "socials";
+  grid-area: footern;
+  background-color:#FADFD1;
+  padding-bottom: 10px;
+}
+footer a{
+  color: #000000;
+}
+#about{
+  grid-area: about;
+}
+#socials{
+  grid-area: socials;
+}
+/* Storleksanpassning desktop */
+@media(min-width: 700px){
+footer{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#valueOne{
+  margin: 0;
+}
+#about{
+  text-align: center;
+}
+#socials{
+  text-align: center;
+}
+#products{
+  display: flex;
+}
+}
+/* Storleksanpassning mobil */
+@media(max-width: 700px){
+footer{
+  padding-bottom: 50px;
+}
+img{ 
+  display: none;
+}
+#valueOne{
+  margin: 0;
+}
+#one{
+  padding-bottom: 30px;
+}
+#two{
+  padding-bottom: 30px;
+}
+#three{
+  padding-bottom: 30px;
+}
+#four{
+  padding-bottom: 30px;
+}
+h2{
+  margin-bottom: 40px;
+}
+#socials{
+  margin-top: 50px;
+}
+#about{
+  margin-top: 50px;
+}
+section{
+  display: flex;
+  align-items: center;
+}
+}
